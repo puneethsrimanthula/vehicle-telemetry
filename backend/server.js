@@ -68,4 +68,5 @@ app.get('/api/vehicles/:id', async (req, res) => {
   res.json({ vehicle: vehicleRows[0], history: historyRows });
 });
 
-app.listen(5000, () => console.log('Backend server running on http://localhost:5000'));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Backend server running on port ${PORT}`));
